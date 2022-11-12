@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>devflix cadastro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+
+  
+  <body>
+    <div class="div div-flex cadastro">
+      
+      
+      <section class="center">
+        <h1>Crie sua conta</h1>
+        <form class="form">
+
+          <label for="nome" class="label-form">Seu nome</label>
+          <input type="text" id="nome" placeholder="Nome e sobrenome">
+
+          <label for="email" class="label-form">Email</label>
+          <div>
+            <input type="email" id="email">
+            <i class="icon-error fa-sharp fa-solid fa-circle-exclamation" id="email-icon-error"></i>
+          </div>
+          <span class="email-text">Email inválido</span>
+
+          <label for="senha" class="label-form">Senha</label>
+          <div>
+            <input type="password" id="senha" placeholder="Insira sua senha">
+            <i class="icon-error fa-sharp fa-solid fa-circle-exclamation" id="senha-icon-error"></i>
+          </div>
+          <span class="senha-text">Sua senha deve ter no mínimo 8 caracteres</span>
+          
+          <label for="confirmarSenha" class="label-form">Confirmar senha</label>
+          <div>
+            <input type="password" id="confirmarSenha">
+            <i class="icon-error fa-sharp fa-solid fa-circle-exclamation" id="confirmarSenha-icon-error"></i>
+          </div>
+          <span class="confirmarSenha-text">As senhas devem ser iguais</span>
+
+          <button type="submit" id="button" onclick="validate(email, senha, confirmarSenha)">Cadastrar</button>
+        </form>
+      </section>
+      <div id="fazer_login">
+        
+        Já tem uma conta? <a href="index.html" id="link">Faça o login</a>
+
+      </div>
+
+    </div>
+  </body>
+
+
+
+  <script type="text/javascript" src="index.js"></script>
+</html>
