@@ -43,8 +43,9 @@ function validate(email, senha, confirmarSenha) {
   if (isvalidEmail && isvalidSenha && isvalidConfirmarSenha) {
     localStorage.setItem("email", email.value)
     localStorage.setItem("senha", senha.value)
+    const address = window.location.href.replace("sign_up.html", "index.html")
     setTimeout(() => {
-      window.location.replace(`${window.location.origin}/index.html`)
+      window.location.replace(address)
     })
   }
 }
@@ -67,12 +68,19 @@ function validateConfirmPassword(senha, confirmarSenha) {
 }
 
 // LOGIN PAGE
+const emailSenhaText = document.querySelector(".email-senha-text")
+
 function login(email, senha) {
-  console.log(localStorage.getItem("email"))
-  console.log(email)
-  if (email.value==localStorage.getItem("email") && senha.value==localStorage.getItem("senha")) {
+  emailSenhaText.classList.remove("invalid")
+  const emailUsuario = localStorage.getItem("email")
+  const senhaUsuario = localStorage.getItem("senha")
+  if (email.value != emailUsuario || senha.value != senhaUsuario) {
+    emailSenhaText.classList.add("invalid")
+  }
+  if (email.value==emailUsuario && senha.value==senhaUsuario) {
+    const address = window.location.href.replace("index.html", "main.html")
     setTimeout(() => {
-      window.location.replace("http://127.0.0.1:5500/main.html")
+      window.location.replace(address)
     })
   } 
 }

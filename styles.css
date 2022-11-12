@@ -66,6 +66,7 @@ input:focus {
   justify-content: space-between;
 }
 
+.email-senha-text,
 .email-text, 
 .senha-text, 
 .confirmarSenha-text {

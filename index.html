@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <script src="index.js"></script> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/dev-icon.png">
   </head>
-
-
 
   <body>
     <div class="div div-flex login">
@@ -28,26 +26,20 @@
   
             <label for="email" class="label-form">Email</label>
             <input type="email" id="email" required>
+
             <label for="senha" class="label-form">Senha</label>
             <input type="password" id="senha" placeholder="Insira sua senha" required>
+            <span class="email-senha-text">Email ou senha inválidos</span>
           
             <button type="submit" id="button" onclick="login(email, senha)">Entrar</button>
           </form>
         </section>
         <div id="fazer_login">
-          
           Não tem uma conta? <a href="sign_up.html" id="link">Faça o cadastro</a>
-  
-        </div>
+        </div> 
 
-        
       </div>
-      
-
     </div>
   </body>
-
-
-
   <script type="text/javascript" src="index.js"></script>
 </html>
